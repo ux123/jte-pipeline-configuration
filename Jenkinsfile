@@ -1,4 +1,4 @@
 gbuild()
 unit_test()
-build()
+load()
 static_code_analysis()
