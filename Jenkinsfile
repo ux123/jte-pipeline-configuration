@@ -1,5 +1,3 @@
-//unit_test()
-//build()
-stage("to you"){
+unit_test()
+build()
 static_code_analysis()
-}
