@@ -3,5 +3,7 @@ jte{
 }
 @merge libraries{
 sonarqube
+maven
+gradle
 }
 
