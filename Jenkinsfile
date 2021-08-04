@@ -1,5 +1,3 @@
-jte.libraries.gradle.unit_test()
-jte.libraries.gradle.build()
-jte.libraries.maven.unit_test()
-jte.libraries.maven.build()
+build()
+unit_test()
 static_code_analysis()
