@@ -1,4 +1,5 @@
 @merge libraries{
 sonarqube
+build
 }
 
