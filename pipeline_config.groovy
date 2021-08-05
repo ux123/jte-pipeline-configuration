@@ -1,5 +1,4 @@
 @merge libraries{
 sonarqube
-maven
 }
 
