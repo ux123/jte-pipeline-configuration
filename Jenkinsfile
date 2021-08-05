@@ -1,4 +1,4 @@
 //unit_test()
-build()
+make()
 static_code_analysis()
 
