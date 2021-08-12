@@ -5,7 +5,7 @@ stage("Running build"){
   make()
 }
 stage("Running code analysis"){
-  static_code_analysis()
+  static-code-analysis()
 }
 
 def a = 2
