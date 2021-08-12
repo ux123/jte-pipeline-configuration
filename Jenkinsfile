@@ -34,7 +34,7 @@ stage("Rerunning unit test "){
 }
 
 if (f > e){
-stage("Rerunning unit test "){
+stage("Rerunning make test "){
   make()
 }
 }
