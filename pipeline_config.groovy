@@ -1,3 +1,6 @@
 @merge libraries{
-sonarqube
+  sonarqube{
+    num1 = "1"
+    num2 = "2"
+  }
 }
