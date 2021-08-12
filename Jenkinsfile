@@ -1,4 +1,4 @@
-def num1 = "2"
+def num1 = "1"
 def num2 = "2"
 stage("Running unit test"){
   unit_test()
