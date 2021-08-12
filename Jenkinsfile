@@ -10,3 +10,9 @@ stage("Running code analysis"){
 stage("Rerunning unit test "){
   unit_test()
 }
+stage("Rerunning build"){
+  unit_test()
+}
+stage("Rerunning build"){
+  unit_test()
+}
