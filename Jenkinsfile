@@ -24,7 +24,7 @@ def getInputs(){
       getInputs()
       if ("${selectedEnvs['updateValues']}" == "YES"){
           if (a<b){
-            selectedInputs['module'] == "dance"
+            selectedInputs['module'] = "dance"
             defaultInput = "${selectedInputs['module']}"
             echo "default input: ${defaultInput}" 
           }
