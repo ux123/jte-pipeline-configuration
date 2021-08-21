@@ -1,5 +1,7 @@
 def a = 1
 def b = 2
+def javaOpts=""
+def replicaCount=""
 def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
 selectedEnvs = input(
@@ -16,8 +18,8 @@ def getInputs(){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'StringParameterDefinition', defaultValue: "some java option", description: 'Make decision', name:'javaOpts'],
-  [$class: 'StringParameterDefinition', defaultValue: "1", description: 'Make decision', name:'replicaCount']
+  //[$class: 'StringParameterDefinition', defaultValue: "some java option", description: 'Make decision', name:'javaOpts'],
+  //[$class: 'StringParameterDefinition', defaultValue: "1", description: 'Make decision', name:'replicaCount']
 
   ])
   return(selectedInputs)  
@@ -29,11 +31,15 @@ selectedInputs = input(
       getEnvs()
         if ("${selectedEnvs['updateValues']}" == "yes"){
             if("${selectedEnvs['module']}" == "sing"){
-            getInputs()
-            selectedInputs['javaOpts'] = "the set default java option"
-            selectedInputs['replicaCount'] = "2"
-            newJavaOption = "${selectedInputs['javaOpts']}"
-            newReplicaCount = "${selectedInputs['replicaCount']}"
+            //getInputs()
+            javaOpts = "the set default java option"
+            replicaCount = 2
+            newJavaOption = $javaOpts
+            newReplicaCount = $replicaCount
+            //selectedInputs['javaOpts'] = "the set default java option"
+            //selectedInputs['replicaCount'] = "2"
+            //newJavaOption = "${selectedInputs['javaOpts']}"
+            //newReplicaCount = "${selectedInputs['replicaCount']}"
             echo "selected value: ${selectedEnvs['updateValues']}"
             echo "selected module : ${selectedEnvs['module']}"
             echo "new java option: ${newJavaOption}"
