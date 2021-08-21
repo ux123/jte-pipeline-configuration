@@ -11,7 +11,7 @@ selectedEnvs = input(
 def getInputs(){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
-  id: 'Proceed', message:"Choose module", parameters: [
+  id: 'Proceed', message:"Choose module ${env}", parameters: [
   [$class: 'StringParameterDefinition', defaultValue: "sing", description: 'Make decision', name:'module']
   ])
   return(selectedInputs)  
@@ -20,7 +20,7 @@ selectedInputs = input(
     node{
       stage('Something cooking'){
       getEnvs()
-      getInputs
+      getInputs()
       if (selectedEnvs['updateValues'] == "yes"){
         for (env in environment){
           selectedInputs['module'] == "dance"
