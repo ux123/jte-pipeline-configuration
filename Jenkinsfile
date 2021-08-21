@@ -2,7 +2,7 @@ def environment = ['dev', 'test']
 def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
 selectedEnvs = input(
-  id: 'Proceed', message:'Choose something', parameters: [
+  id: 'Proceed', message:'Choose value', parameters: [
   [$class: 'ChoiceParameterDefinition', choices: "No\nYes", description: 'Make decision', name:'updateValues']
   ])
   return(selectedEnvs)  
@@ -11,7 +11,7 @@ selectedEnvs = input(
 def getInputs(){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
-  id: 'Proceed', message:"Select for ${env}", parameters: [
+  id: 'Proceed', message:"Choose module", parameters: [
   [$class: 'StringParameterDefinition', defaultValue: "sing", description: 'Make decision', name:'module']
   ])
   return(selectedInputs)  
