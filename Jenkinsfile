@@ -34,7 +34,8 @@ selectedInputs = input(
             selectedInputs['replicaCount'] = "2"
             newJavaOption = "${selectedInputs['javaOpts']}"
             newReplicaCount = "${selectedInputs['replicaCount']}"
-            //echo "input : ${selectedEnvs['updateValues']}"
+            echo "selected value: ${selectedEnvs['updateValues']}"
+            echo "selected module : ${selectedEnvs['module']}"
             echo "new java option: ${newJavaOption}"
             echo "new replica count: ${newReplicaCount}"  
           }
