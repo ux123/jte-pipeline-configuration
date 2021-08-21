@@ -12,7 +12,7 @@ selectedInputs = input(
       
       stage('Something cooking'){
       getInputs()
-      if ("${selectedInputs['updateValues']}"=="no"){
+      if ("${selectedInputs[updateValues]}"=="no"){
       appName = "${selectedInputs['updateValues']}"
        println (appName)
       selectedInputs['name'] = "yes"
