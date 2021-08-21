@@ -4,7 +4,7 @@ def appName=""
 def getInputs(){
 selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'StringParameterDefinition', defaultValue: "No", description: 'Make decision', name:'updateValues']
+  [$class: 'StringParameterDefinition', defaultValue: "no", description: 'Make decision', name:'updateValues']
   ])
   return(selectedInputs)  
 }
@@ -12,8 +12,7 @@ selectedInputs = input(
       
       stage('Something cooking'){
       getInputs()
-      currentBuild.Description = "${selectedInputs['updateValues']}"
-      if (a<b){
+      if ("${selectedInputs['updateValues']}"=="no"){
       appName = "${selectedInputs['updateValues']}"
        println (appName)
       selectedInputs['name'] = "yes"
