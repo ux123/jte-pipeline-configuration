@@ -10,7 +10,7 @@ selectedInputs = input(
 }
     node{
       
-      stage('Something cooking')
+      stage('Something cooking'){
       getInputs()
       currentBuild.Description = "${selectedInputs['updateValues']}"
       if (a<b){
@@ -21,8 +21,7 @@ selectedInputs = input(
       echo "${selectedInputs['name']}"
       println (newChoice)
       echo "$newChoice"
-      echo "${newChoice}"
-      
-      
+      echo "${newChoice}" 
+      }
       }
     }
