@@ -12,13 +12,13 @@ selectedInputs = input(
     node{
       
       stage('Something cooking'){
-      getInputs(selectedInputs)
-      if ("${selectedInputs[]}"=="no"){
-      appName = "${selectedInputs['updateValues']}"
+      getInputs()
+      if ("${getInputs.selectedInputs['module']}"=="no"){
+      appName = "${getInputs.selectedInputs['updateValues']}"
        println (appName)
-      selectedInputs['name'] = "yes"
-      newChoice = "${selectedInputs['name']}"
-      echo "${selectedInputs['name']}"
+      getInputs.selectedInputs['name'] = "yes"
+      newChoice = "${getInputs.selectedInputs['name']}"
+      echo "${getInputs.selectedInputs['name']}"
       println (newChoice)
       echo "$newChoice"
       echo "${newChoice}" 
