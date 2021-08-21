@@ -9,9 +9,14 @@ selectedInputs = input(
 return(selectedInputs)    
 }
     node{
-      if (a<b){
       getInputs()
-      
+      if (a<b){
+      selectedInputs['name'] = "yes"
+      newChoice = "${selectedInputs['name']}"
+      echo "${selectedInputs['name']}"
+      println (newChoice)
+      echo "$newChoice"
+      echo "${newChoice}"
       appName = "${selectedInputs['updateValues']}"
       
       }
