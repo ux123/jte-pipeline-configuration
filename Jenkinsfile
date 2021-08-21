@@ -6,7 +6,7 @@ def getInputs(){
 selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
   [$class: 'StringParameterDefinition', defaultValue: "no", description: 'Make decision', name:'updateValues'],
-  [$class: 'ChoiceParameterDefinition', choices: "no\nYes", description: 'Make decision', name:'module']
+  [$class: 'ChoiceParameterDefinition', choices: "dance\nsing", description: 'Make decision', name:'module']
   ])
   return(selectedInputs)  
 }
@@ -15,15 +15,13 @@ selectedInputs = input(
       
       stage('Something cooking'){
       getInputs()
-      if ("${selectedInputs['module']}"=="no"){
       appName = "${selectedInputs['updateValues']}"
-      println (appName)
-      selectedInputs['name'] = "yes"
+      if (a<b){
+      println "app name: $appName"
+      selectedInputs['name'] = "walk"
       newChoice = "${selectedInputs['name']}"
-      echo "${selectedInputs['name']}"
-      println (newChoice)
-      echo "$newChoice"
-      echo "${newChoice}" 
+      echo "name: ${selectedInputs['name']}"
+      echo "new choice: ${newChoice}" 
       }
       }
     }
