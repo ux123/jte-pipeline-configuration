@@ -12,7 +12,7 @@ def getInputs(env){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
   id: 'Proceed', message:"Select for ${env}", parameters: [
-  [$class: 'StringParameterDefinition', defaultValue: "sing", description: 'Make decision', name:'module'],
+  [$class: 'StringParameterDefinition', defaultValue: "sing", description: 'Make decision', name:'module']
   ])
   return(selectedInputs)  
 }
