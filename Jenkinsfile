@@ -6,10 +6,13 @@ selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
   [$class: 'StringParameterDefinition', defaultValue: "No", description: 'Make decision', name:'updateValues']
   ])
-return(selectedInputs)    
+    
 }
     node{
+      
+      stage('Something cooking')
       getInputs()
+      currentBuild.Description = "${selectedInputs['updateValues']}"
       if (a<b){
       appName = "${selectedInputs['updateValues']}"
        println (appName)
