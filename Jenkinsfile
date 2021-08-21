@@ -4,7 +4,7 @@ def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
 selectedEnvs = input(
   id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'ChoiceParameterDefinition', choices: "no\nyes", description: 'Make decision', name:'updateValues']
+  [$class: 'StringParameterDefinition', defaultValue: "no", description: 'Make decision', name:'updateValues']
   ])
   return(selectedEnvs)  
 }
