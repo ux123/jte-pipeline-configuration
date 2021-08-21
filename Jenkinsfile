@@ -1,6 +1,5 @@
 def a = 1
 def b = 2
-def appName=""
 def getInputs(){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
@@ -15,14 +14,11 @@ selectedInputs = input(
       
       stage('Something cooking'){
       getInputs()
-      appName = "${selectedInputs['updateValues']}"
       if (a<b){
-      println "app name: $appName"
-      selectedInputs['name'] = "walk"
-      newChoice = "${selectedInputs['name']}"
-      echo "name: ${selectedInputs['name']}"
+      selectedInputs['defaultValue'] = "walk"
+      newChoice = "${selectedInputs['defaultValue']}"
+      echo "name: ${selectedInputs['defaultValue']}"
       echo "new choice: ${newChoice}" 
-      println "app name: $appName"
       }
       }
     }
