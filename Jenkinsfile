@@ -16,8 +16,8 @@ selectedInputs = input(
       getInputs()
       if (a<b){
       selectedInputs['updateValues'] = "yes"
-      newChoice = "${selectedInputs['defaultValue']}"
-      echo "input : ${selectedInputs['defaultValue']}"
+      newChoice = "${selectedInputs['updateValues']}"
+      echo "input : ${selectedInputs['updateValues']}"
       echo "new choice: ${newChoice}" 
       }
       }
