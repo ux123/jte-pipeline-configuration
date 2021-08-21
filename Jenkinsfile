@@ -4,15 +4,16 @@ def appName=""
 def getInputs(){
 selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'StringParameterDefinition', defaultValue: "no", description: 'Make decision', name:'updateValues']
+  [$class: 'StringParameterDefinition', defaultValue: "no", description: 'Make decision', name:'updateValues'],
+  [$class: 'ChoiceParameterDefinition', choices: "no\nYes", description: 'Make decision', name:'module']
   ])
   return(selectedInputs)  
 }
     node{
       
       stage('Something cooking'){
-      getInputs()
-      if ("${selectedInputs[updateValues]}"=="no"){
+      getInputs(selectedInputs)
+      if ("${selectedInputs[]}"=="no"){
       appName = "${selectedInputs['updateValues']}"
        println (appName)
       selectedInputs['name'] = "yes"
