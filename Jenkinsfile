@@ -10,9 +10,9 @@ return(selectedInputs)
     node{
       if (a<b){
       getInputs()
-      selectedInputs['updteValues'] = "yes"
-      newChoice = "${selectedInputs['updteValues']}"
-        echo "${selectedInputs['updteValues']}"
+      selectedInputs['updateValues'] = "yes"
+      newChoice = "${selectedInputs['updateValues']}"
+        echo "${selectedInputs['upadteValues']}"
         print (newChoice)
         echo "$newChoice"
         echo "${newChoice}"
