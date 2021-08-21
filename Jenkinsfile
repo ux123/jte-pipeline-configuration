@@ -12,7 +12,7 @@ selectedEnvs = input(
 }
 }
 
-def getInputss(){
+def getInputs(){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
@@ -28,7 +28,7 @@ selectedInputs = input(
       stage('Something cooking'){
       getEnvs()
         if ("${selectedEnvs}['updateValues']" == "yes"){
-          if(a<b){
+          if("${selectedEnvs}['module']" == "sing"){
             getInputs()
             selectedInputs['javaOpts'] = "the set default java option"
             selectedInputs['replicaCount'] = "2"
