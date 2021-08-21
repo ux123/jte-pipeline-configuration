@@ -1,4 +1,5 @@
-def environment = ['dev', 'test']
+def a =1
+def b =2
 def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
 selectedEnvs = input(
@@ -22,7 +23,7 @@ selectedInputs = input(
       getEnvs()
       getInputs()
       if (selectedEnvs['updateValues'] == "yes"){
-        for (env in environment){
+        if (a<b){
           selectedInputs['module'] == "dance"
       defaultInput = "${selectedInputs['module']}"
       echo "default input: ${defaultInput}" 
