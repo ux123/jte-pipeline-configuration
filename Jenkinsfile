@@ -18,16 +18,17 @@ def getInputs(){
   return(selectedInputs)  
   }
 }
-    node{
+  node{
+      
       stage('Something cooking'){
-      getEnvs()
-      if ("${selectedEnvs['updateValues']}" == "YES"){
-          if (a<b){
-            getInputs()
-            selectedInputs['module'] = "dance"
-            defaultInput = "${selectedInputs['module']}"
-            echo "default input: ${defaultInput}" 
-          }
+      getInputs()
+      if (a<b){
+      selectedInputs['module'] = "yes"
+      newChoice = "${selectedInputs['module']}"
+      //echo "input : ${selectedInputs['module']}"
+      echo "new choice: ${newChoice}" 
       }
-   }
-}
+      }
+    }
+    
+
