@@ -34,8 +34,8 @@ selectedInputs = input(
             //getInputs()
             javaOpts = "the set default java option"
             replicaCount = 2
-            newJavaOption = $javaOpts
-            newReplicaCount = $replicaCount
+            newJavaOption = "$javaOpts"
+            newReplicaCount = "$replicaCount"
             //selectedInputs['javaOpts'] = "the set default java option"
             //selectedInputs['replicaCount'] = "2"
             //newJavaOption = "${selectedInputs['javaOpts']}"
