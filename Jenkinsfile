@@ -1,14 +1,15 @@
 def a = 1
 def b = 2
-def getEnvs(){
+def getInputs(){
 selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'StringParameterDefinition', defaultValue: "No", description: 'Make decision', name:'updateValues'
+  [$class: 'StringParameterDefinition', defaultValue: "No", description: 'Make decision', name:'updateValues']
   ])
-return(selectedEnv)    
+return(selectedInputs)    
 }
     node{
       if (a<b){
+      getInputs()
       selectedInputs['updteValues'] = "yes"
       newChoice = "${selectedInputs['updteValues']}"
         echo "${selectedInputs['updteValues']}"
