@@ -1,24 +1,32 @@
-def a = 1
-def b = 2
-def getInputs(){
+def environment = ['dev', 'test']
+def getEnvss(){
+  timeout(time:2,unit:"MINUTES"){
+selectedEnvs = input(
+  id: 'Proceed', message:'Choose something', parameters: [
+  [$class: 'ChoiceParameterDefinition', choices: "No\nYes", description: 'Make decision', name:'updateValues']
+  ])
+  return(selectedEnvs)  
+}
+}
+def getInputs(env){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
-  id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'StringParameterDefinition', defaultValue: "", description: 'Make decision', name:'updateValues'],
-  [$class: 'ChoiceParameterDefinition', choices: "dance\nsing", description: 'Make decision', name:'module']
+  id: 'Proceed', message:"Select for ${env}", parameters: [
+  [$class: 'StringParameterDefinition', defaultValue: "sing", description: 'Make decision', name:'module'],
   ])
   return(selectedInputs)  
 }
 }
     node{
-      
       stage('Something cooking'){
-      getInputs()
-      if (a<b){
-      selectedInputs['updateValues'] = "yes"
-      newChoice = "${selectedInputs['updateValues']}"
-      //echo "input : ${selectedInputs['updateValues']}"
-      echo "new choice: ${newChoice}" 
+      getEnvs()
+      getInputs
+      if (selectedEnvs['updateValues'] == "yes"){
+        for (env in environment){
+          selectedInputs['module'] == "dance"
+      defaultInput = "${selectedInputs['module']}"
+      echo "default input: ${defaultInput}" 
+        }
       }
       }
     }
