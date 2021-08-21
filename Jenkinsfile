@@ -1,4 +1,3 @@
-def env='dev'
 def environment = ['dev', 'test']
 def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
@@ -9,7 +8,7 @@ selectedEnvs = input(
   return(selectedEnvs)  
 }
 }
-def getInputs(env){
+def getInputs(){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
   id: 'Proceed', message:"Select for ${env}", parameters: [
