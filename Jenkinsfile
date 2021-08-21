@@ -4,7 +4,7 @@ def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
 selectedEnvs = input(
   id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'ChoiceParameterDefinition', choices: "dance\nsing", description: 'Make decision', name:'module']
+  [$class: 'ChoiceParameterDefinition', choices: "no\nyes", description: 'Make decision', name:'updateValues']
   ])
   return(selectedEnvs)  
 }
@@ -14,7 +14,7 @@ selectedEnvs = input(
       stage('Something cooking'){
       getEnvs()
       if (a<b){
-      selectedEnvs['updateValues'] = "yes"
+      selectedEnvs['updateValues'] = "maybe"
       newChoice = "${selectedEnvs['updateValues']}"
       //echo "input : ${selectedEnvs['updateValues']}"
       echo "new choice: ${newChoice}" 
