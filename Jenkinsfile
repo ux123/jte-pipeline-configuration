@@ -15,9 +15,9 @@ selectedInputs = input(
       stage('Something cooking'){
       getInputs()
       if (a<b){
-      selectedInputs['defaultValue'] = "walk"
+      selectedInputs['updateValues'] = "yes"
       newChoice = "${selectedInputs['defaultValue']}"
-      echo "name: ${selectedInputs['defaultValue']}"
+      echo "input : ${selectedInputs['defaultValue']}"
       echo "new choice: ${newChoice}" 
       }
       }
