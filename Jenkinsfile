@@ -14,7 +14,7 @@ return(selectedInputs)
       newChoice = "${selectedInputs['updteValues']}"
         echo "${selectedInputs['updteValues']}"
         print (newChoice)
-        echo "$newChoice
+        echo "$newChoice"
         echo "${newChoice}"
       }
     }
