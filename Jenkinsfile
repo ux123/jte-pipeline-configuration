@@ -12,7 +12,7 @@ return(selectedInputs)
       getInputs()
       selectedInputs['updateValues'] = "yes"
       newChoice = "${selectedInputs['updateValues']}"
-        echo "${selectedInputs['upadteValues']}"
+        echo "${selectedInputs['updateValues']}"
         print (newChoice)
         echo "$newChoice"
         echo "${newChoice}"
