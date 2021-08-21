@@ -22,6 +22,7 @@ selectedInputs = input(
       newChoice = "${selectedInputs['name']}"
       echo "name: ${selectedInputs['name']}"
       echo "new choice: ${newChoice}" 
+      println "app name: $appName"
       }
       }
     }
