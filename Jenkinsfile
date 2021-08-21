@@ -21,9 +21,9 @@ def getInputs(){
     node{
       stage('Something cooking'){
       getEnvs()
-      getInputs()
       if ("${selectedEnvs['updateValues']}" == "YES"){
           if (a<b){
+            getInputs()
             selectedInputs['module'] = "dance"
             defaultInput = "${selectedInputs['module']}"
             echo "default input: ${defaultInput}" 
