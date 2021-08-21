@@ -16,8 +16,8 @@ def getInputs(){
   timeout(time:2,unit:"MINUTES"){
 selectedInputs = input(
   id: 'Proceed', message:'Choose something', parameters: [
-  [$class: 'StringParameterDefinition', defaultValue: "some java option", description: 'Make decision', name:'javaOpts'],
-  [$class: 'StringParameterDefinition', defaultValue: "1", description: 'Make decision', name:'replicaCount']
+  [$class: 'StringParameterDefinition', defaultValue: "some java option", omitValueField: true, description: 'Make decision', name:'javaOpts'],
+  [$class: 'StringParameterDefinition', defaultValue: "1", omitValueField: true, description: 'Make decision', name:'replicaCount']
 
   ])
   return(selectedInputs)  
