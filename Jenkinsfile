@@ -27,10 +27,9 @@ selectedInputs = input(
       
       stage('Something cooking'){
       getEnvs()
-      getInputs()
-        if ("${selectedEnvs}['updateValues']" == "yes"){
-            if("${selectedEnvs}['module']" == "sing"){
-            
+        if ("${selectedEnvs['updateValues']}" == "yes"){
+            if("${selectedEnvs['module']}" == "sing"){
+            getInputs()
             selectedInputs['javaOpts'] = "the set default java option"
             selectedInputs['replicaCount'] = "2"
             newJavaOption = "${selectedInputs['javaOpts']}"
