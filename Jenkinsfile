@@ -1,23 +1,23 @@
 def a = 1
 def b = 2
-def getInputs(){
+def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
-selectedInputs = input(
+selectedEnvs = input(
   id: 'Proceed', message:'Choose something', parameters: [
   [$class: 'StringParameterDefinition', defaultValue: "", description: 'Make decision', name:'updateValues'],
   [$class: 'ChoiceParameterDefinition', choices: "dance\nsing", description: 'Make decision', name:'module']
   ])
-  return(selectedInputs)  
+  return(selectedEnvs)  
 }
 }
     node{
       
       stage('Something cooking'){
-      getInputs()
+      getEnvs()
       if (a<b){
-      selectedInputs['updateValues'] = "yes"
-      newChoice = "${selectedInputs['updateValues']}"
-      //echo "input : ${selectedInputs['updateValues']}"
+      selectedEnvs['updateValues'] = "yes"
+      newChoice = "${selectedEnvs['updateValues']}"
+      //echo "input : ${selectedEnvs['updateValues']}"
       echo "new choice: ${newChoice}" 
       }
       }
