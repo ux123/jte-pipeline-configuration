@@ -1,3 +1,4 @@
+def env='dev'
 def environment = ['dev', 'test']
 def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
