@@ -1,5 +1,5 @@
 def environment = ['dev', 'test']
-def getEnvss(){
+def getEnvs(){
   timeout(time:2,unit:"MINUTES"){
 selectedEnvs = input(
   id: 'Proceed', message:'Choose something', parameters: [
