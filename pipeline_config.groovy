@@ -1,4 +1,1 @@
-@merge libraries{
-  sonarqube{
-  }
-}
+Nothing to see here
