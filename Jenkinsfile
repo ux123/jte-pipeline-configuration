@@ -6,7 +6,7 @@ if (env.JOB_NAME== "choice_multi/subbranch"){
   println"Yes! $name!!! from multibranch conditonal"
   
 }
-if (env.JOB_NAME == currentBuild.projectName){
+if (currentBuild.projectName == "choice_multi/subbranch"){
   println"Yes! $name!!!"
   
 }
