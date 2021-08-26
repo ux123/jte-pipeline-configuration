@@ -6,4 +6,7 @@ if (env.JOB_NAME== "choice_multi/subbranch"){
   println"Yes! $name!!!"
   
 }
-
+if (env.JOB_NAME == currentBuild.projectName){
+  println"Yes! $name!!!"
+  
+}
