@@ -1,5 +1,5 @@
 echo "I am the second branch"
-echo env.JOB_NAME
+echo "${currentBuild.projectName}"
 name= currentBuild.projectName
 echo "project name from var: $name"
 if (env.JOB_NAME== "choices"){
