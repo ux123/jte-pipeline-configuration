@@ -6,8 +6,8 @@ def getInputs(){
   timeout(time:10, unit:'MINUTES'){
   selectedInputs = input(
   id:'Proceed', message: 'choose', parameters:[
-    [$class: 'StringParameterDefinition', defaultValue:"${javaOpts}", description:'Environemnt', name:'javaOpts'],
-    [$class: 'StringParameterDefinition', defaultValue:"${replicaCount}", description:'No of Pods', name:'replicaCount']])
+    [$class: 'StringParameterDefinition', defaultValue:"${javaOpts}", description:'Environemnt', name:'javOpts'],
+    [$class: 'StringParameterDefinition', defaultValue:"${replicaCount}", description:'No of Pods', name:'repCount']])
   }
 }
 node{
@@ -16,15 +16,15 @@ if (a > b){
   javaOpts= "Testing Options for Java"
   replicaCount="4"
 }
-  javaOpts = "{selectedInputs['javaOpts']}"
-  replicaCount = "{selectedInputs['replicaCount']}"
+  javaOpts = "{selectedInputs['javOpts']}"
+  replicaCount = "{selectedInputs['repCount']}"
   println ("Using these selected inputs:\n" + selectedInputs)
   
     if (d < c){
     javaOpts="${javaOpts}"
     replicaCount="${replicaCount}"
-      println("Java Option from shell: $javaOpts")
-      println("Replica Count from shell: $replicaCount")
+    println("Java Option from shell: $javaOpts")
+    println("Replica Count from shell: $replicaCount")
     
   }
   //println("Java Option from shell: $javaOpts")
