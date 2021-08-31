@@ -2,8 +2,8 @@ def a = 9
 def b = 6
 def c = 7
 def d = 5
-def javaOp
-def replica
+def javaOp = ""
+def replica = ""
 def getInputs(){
   timeout(time:10, unit:'MINUTES'){
   selectedInputs = input(
@@ -25,8 +25,8 @@ if (a > b){
     if (d < c){
     javaOpts="${javaOpts}"
     replicaCount="${replicaCount}"
-      println("Java Option from shell: ${javaOpts}")
-      println("Replica Count from shell: ${replicaCount}")
+    println("Java Option from shell: ${javaOpts}")
+    println("Replica Count from shell: ${replicaCount}")
     
   }
   //println("Java Option from shell: $javaOpts")
