@@ -13,11 +13,11 @@ def getInputs(){
 node{
   getInputs()
 if (a > b){
-  javaOpts= "5"
+  javaOpts= "Testing Options for Java"
   replicaCount="4"
 }
   javaOpts = "{selectedInputs['javaOpts']}"
-  javaOpts = "{selectedInputs['replicaCount']}"
+  replicaCount = "{selectedInputs['replicaCount']}"
   println ("Using these selected inputs:\n" + selectedInputs)
   
     if (d < c){
