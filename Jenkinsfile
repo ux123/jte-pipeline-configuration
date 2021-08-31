@@ -22,7 +22,6 @@ if (a > b){
   
   timeout (time:10, unit:'MINUTES'){
     if (d < c){
-    sh """ 
     javaOpts=${javaOpts}\
     replicaCount=${replicaCount}\
     println("Java Option from shell: $javaOpts")
