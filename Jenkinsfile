@@ -21,10 +21,10 @@ if (a > b){
   println ("Using these selected inputs:\n" + selectedInputs)
   
   timeout (time:10, unit:'MINUTES'){
-    if (d<c){
+    if (d < c){
     sh """ 
-    --set javaOpts=${javaOpts}\
-    --set replicaCount=${replicaCount}\
+    javaOpts=${javaOpts}\
+    replicaCount=${replicaCount}\
     println("Java Option from shell: $javaOpts")
     println("Replica Count from shell: $replicaCount")
     """
