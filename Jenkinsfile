@@ -20,13 +20,12 @@ if (a > b){
   javaOpts = "{selectedInputs['replicaCount']}"
   println ("Using these selected inputs:\n" + selectedInputs)
   
-  timeout (time:10, unit:'MINUTES'){
     if (d < c){
     javaOpts=${javaOpts}
     replicaCount=${replicaCount}
     println("Java Option from shell: $javaOpts")
     println("Replica Count from shell: $replicaCount")
-    }
+    
   }
   }
 
