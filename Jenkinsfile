@@ -2,16 +2,16 @@ def a = 9
 def b = 6
 def c = 7
 def d = 5
-def getInputs(){
+def getInputs(javaOpts, replicaCount){
   timeout(time:10, unit:'MINUTES'){
   selectedInputs = input(
   id:'Proceed', message: 'choose', parameters:[
     [$class: 'StringParameterDefinition', defaultValue:"{javaOpts}", description:'Environemnt', name:'javaOpts'],
-    [$class: 'StringParameterDefinition', defaultValue:"{replicaCount}", description:'Podst', name:'replicaCount']])
+    [$class: 'StringParameterDefinition', defaultValue:"{replicaCount}", description:'No of Pods', name:'replicaCount']])
   }
 }
 node{
-  getInputs()
+  getInputs(javaOpts, replicaCount)
 if (a > b){
   javaOpts= "Testing Options for Java"
   replicaCount="4"
