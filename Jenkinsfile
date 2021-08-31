@@ -25,8 +25,8 @@ if (a > b){
     sh """ 
     --set javaOpts=${javaOpts}\
     --set replicaCount=${replicaCount}\
-    println ("Java Option from shell: $javaOpts")
-    println ("Replica Count from shell: $replicaCount")
+    println("Java Option from shell: $javaOpts")
+    println("Replica Count from shell: $replicaCount")
     """
     }
   }
