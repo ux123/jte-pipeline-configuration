@@ -8,7 +8,6 @@ def getInputs(){
   id:'Proceed', message: 'choose', parameters:[
     [$class: 'StringParameterDefinition', defaultValue:"{javaOpts}", description:'Environemnt', name:'javaOpts'],
     [$class: 'StringParameterDefinition', defaultValue:"{replicaCount}", description:'Podst', name:'replicaCount']])
-  ])
   }
 }
 node{
