@@ -13,7 +13,7 @@ def getInputs(){
 node{
   getInputs()
 if (a > b){
-  javaOpts= "Testing Options for Java"
+  javaOpts= "5"
   replicaCount="4"
 }
   javaOpts = "{selectedInputs['javaOpts']}"
