@@ -27,7 +27,7 @@ if (a > b){
       println("Replica Count from shell: $replicaCount")
     
   }
-  println("Java Option from shell: $javaOpts")
-  println("Replica Count from shell: $replicaCount")
+  //println("Java Option from shell: $javaOpts")
+  //println("Replica Count from shell: $replicaCount")
   }
 
