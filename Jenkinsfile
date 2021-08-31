@@ -2,7 +2,7 @@ def a = 9
 def b = 6
 def c = 7
 def d = 5
-def getInputs(javaOpts, replicaCount){
+def getInputs(){
   timeout(time:10, unit:'MINUTES'){
   selectedInputs = input(
   id:'Proceed', message: 'choose', parameters:[
@@ -11,7 +11,7 @@ def getInputs(javaOpts, replicaCount){
   }
 }
 node{
-  getInputs(javaOpts, replicaCount)
+  getInputs()
 if (a > b){
   javaOpts= "Testing Options for Java"
   replicaCount="4"
