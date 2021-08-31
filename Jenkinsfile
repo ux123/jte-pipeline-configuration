@@ -21,10 +21,10 @@ if (a > b){
   println ("Using these selected inputs:\n" + selectedInputs)
   
     if (d < c){
-    javaOpts=${javaOpts}
-    replicaCount=${replicaCount}
-      println("Java Option from shell: ${javaOpts}")
-      println("Replica Count from shell: ${replicaCount}")
+    javaOpts="${javaOpts}"
+    replicaCount="${replicaCount}"
+      println("Java Option from shell: $javaOpts")
+      println("Replica Count from shell: $replicaCount")
     
   }
   }
