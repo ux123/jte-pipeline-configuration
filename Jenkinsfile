@@ -1,3 +1,3 @@
 static_code_analysis()
-maven()
+make_maven()
 gradle()
