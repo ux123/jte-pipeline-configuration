@@ -5,7 +5,7 @@ def shortCommit
   sonarqube{
        
        test
-    docker_branch
+    docker_branch2
   }
   gradle
   maven
