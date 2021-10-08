@@ -5,7 +5,7 @@ def shortCommit
   sonarqube{   
     test
     newDate = "date"
-    newertDate = "${config.newDate}"
+    newertDate = "${newDate}"
   }
   gradle
   maven
