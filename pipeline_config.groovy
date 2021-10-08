@@ -6,7 +6,6 @@ def shortCommit
     test
     newDate = "date"
     newertDate = "${config.newDate}"
-    newestDate = "${newDate}"
   }
   gradle
   maven
