@@ -3,7 +3,7 @@ def jobBranch
 def shortCommit
 @merge libraries{
   sonarqube{
-     docker_branch = "test"
+     //docker_branch = "test"
   }
   gradle
   maven
