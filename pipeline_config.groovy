@@ -4,4 +4,5 @@ def shortCommit
 @merge libraries{
   sonarqube
   gradle
+  maven
 }
